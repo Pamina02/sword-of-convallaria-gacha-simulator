@@ -6,16 +6,16 @@ const POOL_CONFIG = {
     chuyu: {
         name: "凡人之躯，不朽之志",
         char: "芬恩",
-        img: "",
-        avatar: ""
+        img: "https://patchwiki.biligame.com/images/llzj/2/23/87yrgq625aav22hx1v89mn19cq2pkx8.png",
+        avatar: "https://patchwiki.biligame.com/images/llzj/1/1f/b01pwe1sho6hlyp6uhu9i7hkr0kz3jo.png"
     },
     chongfeng: {
         name: "重逢之时",
         chara: "伦伽勒•传承之枪",
         charb: "伊南娜",
-        img: "",
-        avatara: "",
-        avatarb: ""
+        img: "https://patchwiki.biligame.com/images/llzj/3/3f/a7ehxzu77faxb27jasfpnlucag60aby.png",
+        avatara: "https://patchwiki.biligame.com/images/llzj/c/ca/keld4355sxfdrhyfy98uznvf3pyff84.png",
+        avatarb: "https://patchwiki.biligame.com/images/llzj/b/b5/9hm20wqmn7ph2gcqx5l6cy0zgizkd3m.png"
     }
 };
 
