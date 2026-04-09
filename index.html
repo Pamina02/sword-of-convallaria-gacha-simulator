@@ -99,47 +99,50 @@
         }
         .reset-button:active { transform: translateY(0); }
         
-        /* 卡池卡片 - 修改：自适应包裹内容 */
+        /* ==================== 修复1：卡池选择卡片容器 ==================== */
+        
         .pool-card {
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
-            overflow: visible;
+            overflow: hidden;
             border: 3px solid transparent;
             background: transparent;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            display: inline-block;
-            width: auto;
+            display: block;
+            width: 100%;
             max-width: 100%;
+            box-sizing: border-box;
         }
+        
         .pool-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
+        
         .pool-card.active {
             border-color: #D2691E;
             box-shadow: 0 0 20px rgba(210, 105, 30, 0.4);
         }
 
-        /* 卡池图片区域 - 修改：自适应 */
         .pool-image-area {
-            width: auto;
+            width: 100%;
             height: auto;
-            min-height: 80px;
+            min-height: unset;
             background: transparent;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            overflow: visible;
+            overflow: hidden;
             border-radius: 8px;
         }
 
         .pool-image-area img {
-            width: auto;
+            width: 100%;
             height: auto;
-            object-fit: contain;
+            object-fit: cover;
             display: block;
             max-width: 100%;
         }
@@ -151,13 +154,13 @@
             padding: 30px 20px;
         }
 
-        /* 电脑端优化 - 修改：自适应包裹 */
+        /* 电脑端优化 */
         @media (min-width: 768px) {
             .container { max-width: 1160px !important; }
             
             .pool-card {
-                display: inline-block;
-                width: auto;
+                display: block;
+                width: 100%;
                 max-width: 100%;
                 padding: 0;
                 margin: 0;
@@ -167,16 +170,17 @@
                 max-height: unset;
                 min-height: unset;
                 padding: 0;
-                width: auto;
-                display: inline-flex;
+                width: 100%;
+                display: flex;
             }
             
             .pool-image-area img {
-                width: auto;
+                width: 100%;
                 max-width: 100%;
                 height: auto;
                 margin: 0 auto;
                 display: block;
+                object-fit: cover;
             }
             
             .buttons-desktop {
@@ -196,7 +200,7 @@
             .desktop-container .container { max-width: 1160px !important; }
         }
 
-        /* 手机端优化 - 修改：紧凑排版 */
+        /* 手机端优化 */
         @media (max-width: 767px) {
             .buttons-desktop { display: none; }
             
@@ -235,8 +239,13 @@
             }
             
             .pool-image-area { 
-                min-height: 60px;
+                min-height: unset;
                 border-radius: 6px;
+            }
+            
+            .pool-image-area img {
+                width: 100%;
+                height: auto;
             }
             
             .pool-image-area .placeholder-text { 
@@ -306,7 +315,7 @@
                 font-size: 0.7rem;
             }
             
-            /* 结果区域优化 - 修复：移除固定min-height，使用自适应 */
+            /* 结果区域优化 */
             #result-area {
                 padding: 8px 4px 20px 4px;
             }
@@ -315,26 +324,27 @@
                 gap: 4px;
             }
             
-            /* 修复1：手机端角色卡片自适应，移除固定min-height */
+            /* 手机端角色卡片 */
             .character-card {
-                min-height: auto !important;
-                padding: 4px 2px 6px 2px !important;
+                min-height: unset !important;
+                height: auto !important;
+                padding: 6px 2px 8px 2px !important;
             }
             
-            .pixel-character-img {
-                width: 50px;
-                height: 50px;
+            .character-card .pixel-character-img {
+                width: 45px;
+                height: 45px;
             }
             
-            .character-name {
+            .character-card .character-name {
                 font-size: 9px;
             }
             
-            .rarity-label {
+            .character-card .rarity-label {
                 font-size: 8px;
             }
             
-            /* 修复2：手机端进度条适配 */
+            /* 进度条适配 */
             .pity-bar-container {
                 height: 8px !important;
                 margin: 6px 0 !important;
@@ -371,16 +381,93 @@
             }
         }
         
+        /* ==================== 修复2：抽卡结果角色卡片 ==================== */
+        
+        #result-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            width: 100%;
+            align-items: start;
+        }
+
+        @media (min-width: 768px) {
+            #result-grid {
+                grid-template-columns: repeat(10, 1fr);
+                gap: 10px;
+            }
+        }
+        
         .character-card { 
             animation: fadeInUp 0.5s ease;
-            /* 默认样式，让内容自适应 */
-            min-height: auto;
-            height: auto;
+            min-height: unset !important;
+            height: auto !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 8px 4px 10px 4px;
+            box-sizing: border-box;
+            align-self: start;
         }
         
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .character-card .rarity-label {
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            margin-bottom: 4px;
+            line-height: 1;
+        }
+        
+        .character-card .pixel-character-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            image-rendering: pixelated;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .character-card .character-name {
+            font-size: 11px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            margin-top: 4px;
+            line-height: 1.2;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .character-card {
+                padding: 12px 8px 16px 8px !important;
+            }
+            
+            .character-card .pixel-character-img {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .character-card .character-name {
+                font-size: 12px;
+            }
+            
+            .character-card .rarity-label {
+                font-size: 11px;
+            }
         }
         
         .pity-bar { 
@@ -415,35 +502,6 @@
             color: #8B4513;
             font-size: 18px;
             border: 1px solid #ddd;
-        }
-
-        /* 稀有度标签样式 */
-        .rarity-label { 
-            font-size: 10px; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5); 
-        }
-        
-        /* 像素人物图片样式 */
-        .pixel-character-img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            image-rendering: pixelated;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-        }
-        
-        /* 角色名样式 */
-        .character-name {
-            font-size: 11px;
-            font-weight: bold;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%;
         }
 
         /* 卡池类型标签 - 鸢尾花纹饰版 */
@@ -524,7 +582,6 @@
         @media (min-width: 768px) {
             .mobile-only { display: none !important; }
             
-            /* 修复3：电脑端传说角色统计字体增大 */
             .legend-stats-grid-desktop {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -533,38 +590,6 @@
             
             .legend-stats-grid-desktop .text-amber-600 { 
                 font-size: 14px !important; 
-            }
-            
-            /* 修复4：电脑端结果区域自适应包裹 */
-            #result-area {
-                padding: 16px;
-            }
-            
-            #result-grid {
-                display: grid;
-                grid-template-columns: repeat(10, 1fr);
-                gap: 8px;
-                width: 100%;
-            }
-            
-            /* 电脑端角色卡片样式 */
-            .character-card {
-                min-height: auto;
-                height: auto;
-                padding: 8px 4px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-            }
-            
-            /* 确保卡片内容居中 */
-            .character-card .flex-1 {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                flex: 1;
             }
         }
     </style>
@@ -680,7 +705,6 @@
                         <div id="up-characters" class="flex flex-wrap gap-4 mb-6"></div>
 
                         <div class="grid grid-cols-1 gap-4">
-                            <!-- 修复2：添加pity-bar-container类用于更好的进度条控制 -->
                             <div class="bg-amber-50 rounded-xl p-4 border border-amber-200">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-sm font-semibold text-amber-800">全局保底</span>
@@ -744,7 +768,6 @@
                 </div>
             </div>
 
-            <!-- 修复4：电脑端结果区域使用更好的布局 -->
             <div id="result-area" class="hidden bg-white rounded-2xl shadow-lg pt-1 pb-12 px-2 mb-2 border border-amber-100">
                 <h3 class="text-lg font-bold text-amber-900 flex items-center" style="margin:0px 0 7px 0;">
                     <img src="https://patchwiki.biligame.com/images/llzj/8/81/lxht69ujupvx62vwuifmdy9godmu7ub.png" 
@@ -755,7 +778,6 @@
                     邂逅结果
                     <span id="result-count" class="ml-2 text-sm font-normal text-amber-600"></span>
                 </h3>
-                <!-- 修复4：使用flex布局确保卡片居中且自适应 -->
                 <div id="result-grid" class="grid grid-cols-5 md:grid-cols-10 gap-2 md:gap-3"></div>
             </div>
 
@@ -775,7 +797,6 @@
                     <h3 class="text-lg font-bold text-amber-900" style="margin: 0px 0 7px 0;">
                         <img src="https://patchwiki.biligame.com/images/llzj/a/a9/abs45fkpnewex091qqvafa7ynzndejo.png" alt="传说图标" class="w-14 h-14 object-contain inline-block align-middle" style="margin:0 -3px 0 -7px;" id="legend-icon-desktop"><span class="align-middle">传说角色统计</span>
                     </h3>
-                    <!-- 修复3：增大字体 -->
                     <div id="legend-stats-list-desktop" class="legend-stats-grid-desktop max-h-64 overflow-y-auto">
                         <div class="text-center text-gray-400 py-8 col-span-3">暂无传说角色</div>
                     </div>
