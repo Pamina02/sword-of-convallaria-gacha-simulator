@@ -11,11 +11,11 @@ const POOL_CONFIG = {
     },
     chongfeng: {
         name: "重逢之时",
-        chara: "伦伽勒•传承之枪",
-        charb: "伊南娜",
-        img: "https://patchwiki.biligame.com/images/llzj/3/3f/a7ehxzu77faxb27jasfpnlucag60aby.png",
-        avatara: "https://patchwiki.biligame.com/images/llzj/c/ca/keld4355sxfdrhyfy98uznvf3pyff84.png",
-        avatarb: "https://patchwiki.biligame.com/images/llzj/b/b5/9hm20wqmn7ph2gcqx5l6cy0zgizkd3m.png"
+        chara: "卡姆洛特",
+        charb: "克拉拉",
+        img: "https://patchwiki.biligame.com/images/llzj/3/3f/3u1kq8rt86teupnoy20slvpdtr7edrp.png",
+        avatara: "https://patchwiki.biligame.com/images/llzj/7/7a/055d058w92ojnx9czcfbv2ddszpscvu.png",
+        avatarb: "https://patchwiki.biligame.com/images/llzj/1/1b/he10i3yxupczk82a0dnmgnkcfe0rtzn.png"
     }
 };
 
