@@ -75,7 +75,8 @@ const CHARACTER_DB = {
         "罗格妮达": { type: "守望者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/2/2b/mcd0379119val9qrs51149o4sbss97i.png" },
         "乌莉娅": { type: "突袭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/c/c7/q3mti7ae4qjxzwldqcfpwwui0epxcn7.png" },
         "伊凡": { type: "毁灭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/b/be/gjfxxkdh952wf706kr6sotwjkhqoopw.png" },
-        "芬恩": { type: "防御者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/7/73/5x4d8x6vsfe41yz80z43yv4mffoa4gu.png" }
+        "芬恩": { type: "防御者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/7/73/5x4d8x6vsfe41yz80z43yv4mffoa4gu.png" },
+        "塞娜": { type: "粉碎者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/6/6c/r7sqvm74u1x1jblw6ebib2r2xx8eydt.png" }
     },
     epic: {
         "烛火": { pixelUrl: "https://patchwiki.biligame.com/images/llzj/a/a9/0a3qha1wcxqr154bokdt4mpr40pii72.png" },
@@ -156,7 +157,8 @@ const LEGEND_ORDER = [
     "妮蒂娅", "黎各", "柯莱丹萨", "帕西法尔", "萨曼莎•不灭微光", "伊瑟琳德",
     "全装甲麦莎", "卡姆洛特", "法卡尔•卫国之箭", "伦伽勒•传承之枪", "露卡玛尔",
     "波奇茸茸", "沙姆斯", "克拉拉", "赛琳娜", "叶迦内", "赫砂", "沙娜姿",
-    "基安希尔", "安娜", "阿列克谢•风雪孤行", "罗格妮达", "乌莉娅", "伊凡", "芬恩"
+    "基安希尔", "安娜", "阿列克谢•风雪孤行", "罗格妮达", "乌莉娅", "伊凡", "芬恩",
+    "塞娜"
 ];
 
 const EPIC_ORDER = [
