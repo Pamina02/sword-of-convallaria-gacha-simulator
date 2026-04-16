@@ -4,10 +4,10 @@
 // ==================== 卡池配置 ====================
 const POOL_CONFIG = {
     chuyu: {
-        name: "凡人之躯，不朽之志",
-        char: "芬恩",
-        img: "https://patchwiki.biligame.com/images/llzj/2/23/87yrgq625aav22hx1v89mn19cq2pkx8.png",
-        avatar: "https://patchwiki.biligame.com/images/llzj/1/1f/b01pwe1sho6hlyp6uhu9i7hkr0kz3jo.png"
+        name: "灼心野火",
+        char: "塞娜",
+        img: "https://patchwiki.biligame.com/images/llzj/b/b6/8d4e62xfjakgsotg1o4grkpoywv1oyi.png",
+        avatar: "https://patchwiki.biligame.com/images/llzj/2/2c/gk5xl4lk65d1ejg085shrrggybf1da0.png"
     },
     chongfeng: {
         name: "重逢之时",
