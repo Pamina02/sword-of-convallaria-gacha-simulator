@@ -4,18 +4,18 @@
 // ==================== 卡池配置 ====================
 const POOL_CONFIG = {
     chuyu: {
-        name: "灼心野火",
-        char: "塞娜",
-        img: "https://patchwiki.biligame.com/images/llzj/b/b6/8d4e62xfjakgsotg1o4grkpoywv1oyi.png",
-        avatar: "https://patchwiki.biligame.com/images/llzj/2/2c/gk5xl4lk65d1ejg085shrrggybf1da0.png"
+        name: "金辉与血律",
+        char: "阿尔曼",
+        img: "https://patchwiki.biligame.com/images/llzj/8/81/h5meu8dkp68dybk8112o7gsa10w3wg5.png",
+        avatar: "https://patchwiki.biligame.com/images/llzj/3/36/3a3mg0bjgmycxx0wv5gt4hir6dl1m34.png"
     },
     chongfeng: {
         name: "重逢之时",
-        chara: "卡姆洛特",
-        charb: "克拉拉",
-        img: "https://patchwiki.biligame.com/images/llzj/3/3f/3u1kq8rt86teupnoy20slvpdtr7edrp.png",
-        avatara: "https://patchwiki.biligame.com/images/llzj/7/7a/055d058w92ojnx9czcfbv2ddszpscvu.png",
-        avatarb: "https://patchwiki.biligame.com/images/llzj/1/1b/he10i3yxupczk82a0dnmgnkcfe0rtzn.png"
+        chara: "露卡玛尔",
+        charb: "波奇茸茸",
+        img: "https://patchwiki.biligame.com/images/llzj/3/3f/oz7x9kar1ey4ss1neg0hyljbdgrsh76.png",
+        avatara: "https://patchwiki.biligame.com/images/llzj/2/28/lsl0basrl2u7cksj9pqv1h6xiziihdu.png",
+        avatarb: "https://patchwiki.biligame.com/images/llzj/3/37/q51rvg82quelf4ea0wzjspaxxuti251.png"
     }
 };
 
