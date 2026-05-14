@@ -9,7 +9,7 @@ const CHARACTER_DB = {
         "法卡尔": { type: "守望者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/e/e3/2bkj352g2jxzbmq0q2l5wz7ds8mb2ct.png" },
         "麦莎": { type: "防御者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/1/1d/gs0fmkwtmeelvzxru1vi08zxanu5z25.png" },
         "科尔": { type: "突袭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/1/12/fex0rrtdyc21bfa5vx7xs94nwjlw3lf.png" },
-        "迪塔里奥": { type: "毁灭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/6/6d/b610673hs43yfy9hblgopevt7n0r9ir.png" },
+        "迪塔利奥": { type: "毁灭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/6/6d/b610673hs43yfy9hblgopevt7n0r9ir.png" },
         "拉维耶": { type: "粉碎者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/3/31/n9if053ex6pvpsm2s9kqmx9dccbqa57.png" },
         "莉莉薇儿": { type: "守望者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/a/a3/g3vwyrj10czvrqe1s6cgv2dvzm11b39.png" },
         "歌洛莉亚": { type: "守望者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/f/f8/i9s3ikfwzaunky8vhjrzfs64h3rlg4m.png" },
@@ -76,7 +76,9 @@ const CHARACTER_DB = {
         "乌莉娅": { type: "突袭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/c/c7/q3mti7ae4qjxzwldqcfpwwui0epxcn7.png" },
         "伊凡": { type: "毁灭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/b/be/gjfxxkdh952wf706kr6sotwjkhqoopw.png" },
         "芬恩": { type: "防御者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/7/73/5x4d8x6vsfe41yz80z43yv4mffoa4gu.png" },
-        "塞娜": { type: "粉碎者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/6/6c/r7sqvm74u1x1jblw6ebib2r2xx8eydt.png" }
+        "塞娜": { type: "粉碎者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/6/6c/r7sqvm74u1x1jblw6ebib2r2xx8eydt.png" },
+        "阿加塔•凛冬极星": { type: "突袭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/8/8d/ebt9dbvvcm65fipi6fn1g9dyyh7cn0o.png" },
+        "阿尔曼": { type: "毁灭者", pixelUrl: "https://patchwiki.biligame.com/images/llzj/b/b3/ju9k9d3aypkdq1dir8ccy6tzch0cdeb.png" }
     },
     epic: {
         "烛火": { pixelUrl: "https://patchwiki.biligame.com/images/llzj/a/a9/0a3qha1wcxqr154bokdt4mpr40pii72.png" },
@@ -148,7 +150,7 @@ const CHARACTER_DB = {
 // 角色顺序数组
 const LEGEND_ORDER = [
     "贝拉", "古兹曼", "萨曼莎", "米格尔", "泽维尔", "法卡尔", "麦莎", "科尔",
-    "迪塔里奥", "拉维耶", "莉莉薇儿", "歌洛莉亚", "泰登", "诺诺薇儿", "列奥尼德",
+    "迪塔利奥", "拉维耶", "莉莉薇儿", "歌洛莉亚", "泰登", "诺诺薇儿", "列奥尼德",
     "伊奇", "内尔伽勒", "伦伽勒", "伊南娜", "嘉西娅", "马格努斯", "艾达", "茉茉",
     "索菲亚", "奥古斯特", "席梦娜", "阿列克谢", "蔻蔻娜", "阿坎贝", "哈斯娜",
     "霍玛", "卡丽丝", "夏可露露", "阿加塔", "塔埃尔", "拉维耶•初夏记忆",
@@ -158,7 +160,7 @@ const LEGEND_ORDER = [
     "全装甲麦莎", "卡姆洛特", "法卡尔•卫国之箭", "伦伽勒•传承之枪", "露卡玛尔",
     "波奇茸茸", "沙姆斯", "克拉拉", "赛琳娜", "叶迦内", "赫砂", "沙娜姿",
     "基安希尔", "安娜", "阿列克谢•风雪孤行", "罗格妮达", "乌莉娅", "伊凡", "芬恩",
-    "塞娜"
+    "塞娜", "阿加塔•凛冬极星", "阿尔曼"
 ];
 
 const EPIC_ORDER = [
